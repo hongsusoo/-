@@ -23,7 +23,6 @@ class Example(QWidget):
         self.setWindowTitle("Signal and slot")
         self.show()
     def keyPressEvent(self,e):
-
         if e.key() == Qt.Key_Escape:
             self.close()    
 

@@ -7,13 +7,13 @@ class Exam(QWidget):
         super().__init__()
         self.initUI()
     def initUI(self):
-        a=QMainWindow.statusBar()
-        self.a #상태창
-        self.a.showMessage("안녕하세요!")
-        menu = self.menuBar() # 메뉴바 _ 메뉴생성
-        menu_file = menu.addMenu('File') # 그룹생성
-        menu_edit = menu.addMenu('Edit') # 그룹생성
-        menu_view = menu.addMenu('View') # 그룹생성
+        # a=QMainWindow.statusBar()
+        # self.a #상태창
+        # self.a.showMessage("안녕하세요!")
+        self.menu = self.menuBar() # 메뉴바 _ 메뉴생성
+        menu_file = self.menu.addMenu('File') # 그룹생성
+        menu_edit = self.menu.addMenu('Edit') # 그룹생성
+        menu_view = self.menu.addMenu('View') # 그룹생성
 
         file_exit = QAction('Exit',self) # 메뉴 객체 생성_메모리만 생성_ action이 가능한 객체 생성
         file_exit.setShortcut('Ctrl+Q')
@@ -53,7 +53,7 @@ class Exam(QWidget):
         btn.clicked.connect(qApp.quit) #이벤트 처리
 
         self.setLayout(vbox)
-        # self.setGeometry(500,500,400,600)
+        self.setGeometry(500,500,400,600)
         self.setWindowTitle("앵글가격계산표")
         self.show()
     

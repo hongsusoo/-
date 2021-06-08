@@ -18,11 +18,8 @@ class Example(QWidget):
 
         self.label = QLabel(self.text, self)
         grid.addWidget(self.label,0,0,Qt.AlignTop)
-
         self.setMouseTracking(True)
-
         self.setLayout(grid)
-        
         self.setGeometry(300,300,250,150)
         self.setWindowTitle("Signal and slot")
         self.show()
